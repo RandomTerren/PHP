@@ -42,23 +42,40 @@ $(document).ready(function(){
 
 <body>
 
+<?php
+
+$FirstnameErr = $LastnameErr = "";
+
+$Firstname = $Lastname = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["Firstname"])) {
+    $nameErr = "First Name is required";
+  } else {
+    $Firstname = test_input($_POST["Firstname"]);
+  }
+  
+   if (empty($_POST["Lastname"])) {
+    $LastnameErr = "Lastname is required";
+  } else {
+    $Lastname = test_input($_POST["Lastname"]);
+  }
+   
+
+
 <p id="p1">This is not a real shopping website, do NOT put real info in.</p>
 
 <button onclick="this.remove()">I understand</button>
 
-<form action="Index.php" method="GET">
-
-  <label for="firstname">Firstname:</label><br>
-
-  <input type="text" id="firstname" name="firstname"><br>
-
-  <label for="lastname">Lastname:</label><br>
-
-  <input type="text" id="lastname" name="lastname"><br><br>
-
-  <input type="submit" value="Submit">
+<form action="Index.php" method="get">
   
-</form> 
+First Name: <input type="text" name="Firstname">
+
+Last Name: <input type="text" name="Lastname">
+
+<input type="submit" name="submit" value="Submit">
+
+</form>
 
 <script type="text/javascript">
 

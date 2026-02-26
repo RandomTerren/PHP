@@ -4,23 +4,7 @@
 
 <head>
 
-<?php
-
-$servername = "localhost";
-
-$username = "root";
-
-$password = "mysql";
-
-$dbname = "foster1010";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-	
-  die("Connection failed: " . $conn->connect_error);
-}
-?>
+<?php include 'dbconnect.php'; ?>
 
 <title>Terren Tech Home</title>
 
@@ -71,6 +55,36 @@ if ($conn->connect_error) {
 	?>
 
 	<p>Welcome <?php echo $username; ?></p>
+	
+	<?php 
+	
+	echo $username . "<br>";
+	
+	echo $password . "<br><br>"; 
+
+	$sql = "SELECT * FROM customers WHERE CustID = '" . $username . "';";
+	
+	echo $sql . "<br>";
+	
+	$result = $conn->query($sql);
+
+	if ($result->num_rows > 0) {
+		
+		echo "You are logged in!<br>";
+
+		$row = $result->fetch_assoc();
+		
+		echo "Welcome " . $_SESSION["CustName"] . "!<br>";
+	} 
+	else {
+		
+		echo "Incorrect username or password";
+		
+	}
+	$conn->close();
+
+	?>
+	<a href = nextpage.php>Click here to see session variables</a>
 
 </body>
 

@@ -2,15 +2,33 @@
 
 <html>
 
-<body>
-
 <head>
+
+<?php
+
+$servername = "localhost";
+
+$username = "root";
+
+$password = "mysql";
+
+$dbname = "foster1010";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+	
+  die("Connection failed: " . $conn->connect_error);
+}
+?>
 
 <title>Terren Tech Home</title>
 
 <link rel="stylesheet" href="Style.css">
 
 </head>
+
+<body>
 
 <h1>Terren Tech</h1>
 
@@ -47,12 +65,12 @@
 	<br><br>
 
 	<?php
-		$Username = $_POST["username"];
+		$username = $_POST["username"];
 
-		$Password = $_POST["password"];
+		$password = $_POST["password"];
 	?>
 
-	<p>Welcome <?php echo $Username; ?></p>
+	<p>Welcome <?php echo $username; ?></p>
 
 </body>
 

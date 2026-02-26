@@ -46,6 +46,14 @@
 	
 	<br><br>
 
+	<?php
+		$Username = $_POST["username"];
+
+		$Password = $_POST["password"];
+	?>
+
+	<p>Welcome <?php echo $Username; ?></p>
+
 </body>
 
 </html>

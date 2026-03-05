@@ -49,7 +49,7 @@ $(document).ready(function(){
 
 <button onclick="this.remove()">I understand</button>
 
-<form action="Index.php" method="POST">
+<form action="Target.php" method="POST">
 
   <label for="uname">Username:</label><br>
 
@@ -64,7 +64,6 @@ $(document).ready(function(){
 <script type="text/javascript">
 
 	document.write(qs("username") + " " + qs("password"));
-
 </script>
 
 </body>

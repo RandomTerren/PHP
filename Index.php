@@ -4,8 +4,6 @@
 
 <head>
 
-<?php include 'dbconnect.php'; ?>
-
 <title>Terren Tech Home</title>
 
 <link rel="stylesheet" href="Style.css">
@@ -47,44 +45,6 @@
 	</div>
 	
 	<br><br>
-
-	<?php
-		$username = $_POST["username"];
-
-		$password = $_POST["password"];
-	?>
-
-	<p>Welcome <?php echo $username; ?></p>
-	
-	<?php 
-	
-	echo $username . "<br>";
-	
-	echo $password . "<br><br>"; 
-
-	$sql = "SELECT * FROM customers WHERE CustID = '" . $username . "';";
-	
-	echo $sql . "<br>";
-	
-	$result = $conn->query($sql);
-
-	if ($result->num_rows > 0) {
-		
-		echo "You are logged in!<br>";
-
-		$row = $result->fetch_assoc();
-		
-		echo "Welcome " . $_SESSION["CustName"] . "!<br>";
-	} 
-	else {
-		
-		echo "Incorrect username or password";
-		
-	}
-	$conn->close();
-
-	?>
-	<a href = nextpage.php>Click here to see session variables</a>
 
 </body>
 

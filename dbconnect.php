@@ -2,13 +2,13 @@
 
 $servername = "localhost";
 
-$username = "root";
+$Username = "root";
 
-$password = "mysql";
+$Password = "mysql";
 
 $dbname = "foster1010";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $Username, $Password, $dbname);
 
 if ($conn->connect_error) {
 	

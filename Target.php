@@ -39,7 +39,7 @@ session_start();
 
 	if ($result->num_rows > 0) {
 	
-		echo "You are logged in!<br>";
+		echo "You are logged in! <br>";
 		
 		$row = $result->fetch_assoc();
 
@@ -47,7 +47,7 @@ session_start();
 		
 	} else {
 	
-		echo "Incorrect username or password";
+		echo "Incorrect username or password ";
 		
 		echo "<a href ='Login.php'>Go Back.</a>";
 	}

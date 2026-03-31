@@ -2,13 +2,15 @@
 
 <html>
 
-<body>
-
 <head>
+
+<?php include 'dbconnect.php'; ?>
 
 <link rel="stylesheet" href="Style.css">
 
 </head>
+
+<body>
 
 	<h1>Search</h1>
 
@@ -35,6 +37,17 @@
 	</div>
 	
 	<br><br>
+	
+	<form action="SearchTarget.php" method="post">
+    
+	<div>
+			<input type="text" name="searchbox" />
+	</div>
+	
+    <button type="submit">Search</button>
+	
+</form>
+
 </body>
 
 </html>

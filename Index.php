@@ -4,6 +4,8 @@
 
 <head>
 
+<?php include 'dbconnect.php'; ?>
+
 <title>Terren Tech Home</title>
 
 <link rel="stylesheet" href="Style.css">

@@ -2,14 +2,14 @@
 
 <html>
 
-<body>
-
 <head>
+<?php include 'dbconnect.php'; ?>
 
 <link rel="stylesheet" href="Style.css">
 
 </head>
 
+<body>
 	<h1>wallet</h1>
 
 	<br><br>

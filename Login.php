@@ -4,6 +4,8 @@
 
 <head>
 
+<?php include 'dbconnect.php'; ?>
+
 	<script>
 			
 		   function qs(search_for) {
@@ -65,6 +67,10 @@ $(document).ready(function(){
 
 	document.write(qs("username") + " " + qs("password"));
 </script>
+
+<br>
+
+<a href="Register.php">Register</a>
 
 </body>
 
